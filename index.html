@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Messaround</title>
+    <link rel="icon" type="image/x-icon" href="images/lighton.jpg">
+</head>
+<script>
+    let result = document.getElementById("GFG");
+
+    function changeColor(color) {
+        document.body.style.background = color;
+    }
+
+    function myFunc() {
+        changeColor('yellow');
+        result.innerHTML = "Background Color changed";
+    }
+    document.getElementById("img").classList.add("rotator");
+</script>
+<style>
+    .rotator {
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+</style>
+<body>
+    <h1>Let's learn javascript</h1>
+    <h2>let's learn about onclick and alerts</h2>
+
+    <a href="https://www.youtube.com" onclick="alert('Warning! You are about to leave the page!')">Youtube</a>
+
+    <h2>How do we display and hide text?</h2>
+    <h2>What's my secret identity</h2>
+    <p id="secret"></p>
+    <button onclick="document.getElementById('secret').innerHTML='I have a big brain, I am Megamind';">Reveal!</button>
+    <button onclick="document.getElementById('secret').innerHTML='';">Hide!</button>
+
+    <h1>How do I change an image in javascript?</h1>
+    <img src="images/lighton.jpg" id="myimage" style="height: 200px; width: 200px;">
+    <button onclick="document.getElementById('myimage').src='images/lightoff.jpg'">bulb off</button>
+    <button onclick="document.getElementById('myimage').src='images/lighton.jpg'">bulb on</button>
+
+    <h2>How do we change styles with a button?</h2>
+    <p id="alice">Hi, I am Alice</p>
+    <button onclick="document.getElementById('alice').style.color='blue'; document.getElementById('alice').style.fontSize='5px';">Cake - Eat Me!</button>
+    <button onclick="document.getElementById('alice').style.color='red'; document.getElementById('alice').style.fontSize='50px';">Potion - Drink Me!</button>
+    
+    <br>
+    <br>
+    <button onclick="myFunc()">
+        Click here to change the background
+    </button>
+    <h2 id="GFG" style="color:green;"></h2>
+
+    <br>
+    <br>
+    <img id="img" src="images/lighton.jpg" style="width: 200px; height: 200px;" class="rotator" />
+    <br>
+    <br>
+</body>
+</html>
